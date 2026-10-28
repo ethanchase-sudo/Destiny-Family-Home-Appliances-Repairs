@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destiny Family Home & Appliances Repairs — Hillside, NJ</title>
+<meta name="description" content="Family-owned appliance repair, HVAC, plumbing and drywall in Hillside, New Jersey. Call (908) 440-8103.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1726; --ink-2:#14223a; --ink-3:#1f3150;
+  --paper:#f3f0e9; --paper-2:#e9e4d9; --white:#fbfaf7;
+  --sig:#f2b233; --sig-deep:#d9951a;
+  --line:rgba(13,23,38,.14); --line-inv:rgba(243,240,233,.14);
+  --muted:#5b6474; --muted-inv:#9aa6b8;
+  --display:'Archivo',sans-serif; --body:'Instrument Sans',sans-serif; --mono:'JetBrains Mono',monospace;
+  --r:4px; --pad:clamp(20px,4vw,56px); --max:1360px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.disp{font-family:var(--display);font-stretch:112%;font-weight:800;letter-spacing:-.02em;line-height:.95;text-wrap:balance}
+.cond{font-stretch:75%}
+p{text-wrap:pretty}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 26px;border-radius:var(--r);font-family:var(--display);font-stretch:100%;font-weight:700;font-size:16px;letter-spacing:.01em;transition:transform .2s, background .2s, color .2s}
+.btn-sig{background:var(--sig);color:var(--ink)}
+.btn-sig:hover{background:#ffc552;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid currentColor}
+.btn-ghost:hover{background:var(--paper);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--ink-3);transform:translateY(-2px)}
+.arr{display:inline-block;width:18px;height:2px;background:currentColor;position:relative;transition:width .2s}
+.arr:after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg)}
+.btn:hover .arr{width:26px}
+
+/* utility bar */
+.util{background:var(--ink);color:var(--muted-inv);border-bottom:1px solid var(--line-inv)}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:24px}
+.util .l{display:flex;gap:28px}
+.util b{color:var(--paper);font-weight:500}
+.util .offer{color:var(--sig)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4cc38a;margin-right:8px;box-shadow:0 0 0 4px rgba(76,195,138,.18)}
+.dot.closed{background:#e0694f;box-shadow:0 0 0 4px rgba(224,105,79,.18)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(13,23,38,.94);backdrop-filter:blur(12px);color:var(--paper);transition:box-shadow .3s}
+header.nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:28px;transition:height .3s}
+header.nav.scrolled .wrap{height:68px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:46px;height:46px;background:var(--sig);color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-stretch:80%;font-size:22px;letter-spacing:-.04em;border-radius:3px;position:relative}
+.mark:after{content:"";position:absolute;inset:4px;border:1.5px solid rgba(13,23,38,.35);border-radius:1px}
+.brand .wm{line-height:1}
+.brand .wm b{display:block;font-family:var(--display);font-stretch:115%;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.brand .wm span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-inv)}
+.nav ul{display:flex;list-style:none;gap:4px}
+.nav ul a{display:block;padding:10px 14px;font-weight:500;font-size:15px;color:#d5dbe5;border-radius:3px;transition:background .2s,color .2s}
+.nav ul a:hover{background:var(--ink-3);color:#fff}
+.nav .cta{display:flex;align-items:center;gap:18px}
+.nav .phone{text-align:right;line-height:1.15}
+.nav .phone small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-inv)}
+.nav .phone b{font-family:var(--display);font-stretch:100%;font-size:21px;font-weight:800}
+.nav .btn{height:48px;padding:0 20px;font-size:15px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line-inv);border-radius:3px}
+.burger i{display:block;width:18px;height:2px;background:var(--paper);margin:4px auto}
+
+/* hero */
+.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-inv) 1px,transparent 1px),linear-gradient(90deg,var(--line-inv) 1px,transparent 1px);background-size:88px 88px;mask-image:linear-gradient(100deg,#000 0%,transparent 55%);opacity:.5}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;padding-top:72px;padding-bottom:0;align-items:end}
+.hero .eyebrow{display:flex;align-items:center;gap:12px;color:var(--sig);margin-bottom:28px}
+.hero .eyebrow:before{content:"";width:36px;height:2px;background:var(--sig)}
+.hero h1{font-size:clamp(52px,7.4vw,118px)}
+.hero h1 em{font-style:normal;color:var(--sig);font-stretch:70%;font-weight:900}
+.hero .lede{font-size:20px;color:#c4ccd8;max-width:520px;margin:32px 0 40px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:64px}
+.hero-media{position:relative;align-self:stretch;min-height:620px}
+.hero-media .ph{position:absolute;inset:0 0 0 0;border-radius:var(--r) var(--r) 0 0;overflow:hidden}
+.hero-media .ph img{width:100%;height:100%;object-fit:cover;object-position:55% 30%;transform:scale(1.04);animation:slowzoom 18s ease-out forwards}
+@keyframes slowzoom{to{transform:scale(1)}}
+.hero-media .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,23,38,.65))}
+.tag{position:absolute;background:var(--paper);color:var(--ink);border-radius:var(--r);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.tag.offer{left:-44px;top:64px;padding:20px 22px;width:220px;background:var(--sig)}
+.tag.offer .big{font-family:var(--display);font-weight:900;font-stretch:72%;font-size:64px;line-height:.9;letter-spacing:-.03em}
+.tag.offer p{font-weight:600;font-size:15px;line-height:1.3;margin-top:6px}
+.tag.rate{right:24px;bottom:28px;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.tag.rate .n{font-family:var(--display);font-weight:900;font-size:40px;line-height:1;font-stretch:90%}
+.stars{color:var(--sig-deep);letter-spacing:2px;font-size:15px}
+.tag.rate small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* picker */
+.picker{position:relative;z-index:2;background:var(--paper);color:var(--ink)}
+.picker .wrap{padding-top:0}
+.picker .head{display:flex;justify-content:space-between;align-items:center;padding:22px 0 16px;color:var(--muted)}
+.picker .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pick{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:176px;padding:22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s,color .25s;overflow:hidden}
+.pick .top{display:flex;justify-content:space-between;align-items:flex-start}
+.pick .num{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pick h3{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:28px;letter-spacing:-.02em;line-height:1}
+.pick .sub{font-size:14.5px;color:var(--muted);margin-top:8px}
+.pick .price{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border:1px solid var(--line);border-radius:2px;white-space:nowrap}
+.pick .go{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;transition:transform .25s,background .25s}
+.pick .go .arr{width:14px}
+.pick:hover{background:var(--ink);color:var(--paper)}
+.pick:hover .num,.pick:hover .sub{color:var(--muted-inv)}
+.pick:hover .price{border-color:var(--line-inv)}
+.pick:hover .go{background:var(--sig);border-color:var(--sig);color:var(--ink);transform:rotate(-45deg)}
+.pick.feat{background:var(--sig)}
+.pick.feat .num,.pick.feat .sub{color:rgba(13,23,38,.7)}
+.pick.feat .price{border-color:rgba(13,23,38,.3)}
+.pick.feat h3{font-size:34px}
+
+/* section generic */
+section{position:relative}
+.sec{padding:clamp(80px,10vw,140px) 0}
+.kicker{display:flex;align-items:center;gap:14px;color:var(--muted);margin-bottom:26px}
+.kicker .n{color:var(--ink);font-weight:500}
+.kicker:after{content:"";flex:1;height:1px;background:var(--line);max-width:120px}
+
+/* appliances */
+.app-head{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:end;margin-bottom:56px}
+.app-head h2{font-size:clamp(46px,6vw,96px)}
+.app-head h2 span{color:var(--sig-deep)}
+.app-head p{font-size:19px;color:#3a4352}
+.app-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.atile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink);color:var(--paper);min-height:460px}
+.atile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .4s;opacity:.92}
+.atile:hover img{transform:scale(1.05);opacity:.75}
+.atile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,23,38,0) 40%,rgba(13,23,38,.9))}
+.atile .cap{position:absolute;left:0;right:0;bottom:0;padding:26px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.atile .cap h3{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:34px;letter-spacing:-.02em;line-height:1}
+.atile .cap p{font-size:15px;color:#c9d0db;margin-top:8px;max-width:300px;opacity:0;transform:translateY(8px);transition:.35s}
+.atile:hover .cap p{opacity:1;transform:none}
+.atile .lbl{position:absolute;top:20px;left:20px;z-index:2;background:rgba(13,23,38,.75);backdrop-filter:blur(6px);padding:6px 10px;border-radius:2px;color:var(--paper)}
+.a1{grid-column:span 5;min-height:560px}.a2{grid-column:span 4}.a3{grid-column:span 3}
+.a2,.a3{align-self:end}
+.price-card{grid-column:span 7;background:var(--ink);color:var(--paper);border-radius:var(--r);padding:36px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.price-card .p{font-family:var(--display);font-weight:900;font-stretch:72%;font-size:clamp(70px,8vw,120px);line-height:.85;letter-spacing:-.03em;color:var(--sig)}
+.price-card .p small{font-size:.32em;font-stretch:100%;font-weight:700;color:var(--paper);letter-spacing:0;display:block;margin-top:10px}
+.price-card p{color:#c4ccd8}
+.price-card .mono{color:var(--muted-inv);display:block;margin-bottom:12px}
+.app-quote{grid-column:span 5;border:1px solid var(--line);border-radius:var(--r);padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.app-quote ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.app-quote li{padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-stretch:105%;font-weight:700;font-size:20px;display:flex;align-items:center;gap:12px}
+.app-quote li:before{content:"";width:8px;height:8px;background:var(--sig-deep);transform:rotate(45deg)}
+
+/* services console */
+.console{background:var(--ink);color:var(--paper)}
+.console .kicker{color:var(--muted-inv)}.console .kicker .n{color:var(--paper)}.console .kicker:after{background:var(--line-inv)}
+.con-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:48px;flex-wrap:wrap}
+.con-top h2{font-size:clamp(44px,5.4vw,84px);max-width:780px}
+.tabs{display:flex;gap:6px;background:var(--ink-2);padding:6px;border-radius:6px;border:1px solid var(--line-inv)}
+.tab{height:52px;padding:0 22px;border-radius:4px;font-family:var(--display);font-weight:700;font-stretch:105%;font-size:16px;color:#c4ccd8;display:flex;align-items:center;gap:10px;transition:.25s}
+.tab .mono{font-size:11px;opacity:.6}
+.tab:hover{color:#fff}
+.tab.on{background:var(--paper);color:var(--ink)}
+.panel{display:none;grid-template-columns:1.15fr .85fr;gap:0;border:1px solid var(--line-inv);border-radius:var(--r);overflow:hidden;background:var(--ink-2)}
+.panel.on{display:grid;animation:fadein .5s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .media{position:relative;min-height:560px;overflow:hidden}
+.panel .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .media .inset{position:absolute;right:20px;bottom:20px;width:34%;aspect-ratio:4/3;border-radius:3px;overflow:hidden;border:4px solid var(--ink-2);box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.panel .media .inset img{position:static;width:100%;height:100%;object-fit:cover}
+.panel .body{padding:44px;display:flex;flex-direction:column;gap:26px}
+.panel h3{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:48px;letter-spacing:-.025em;line-height:1}
+.panel .body>p{color:#c4ccd8;font-size:17.5px}
+.scope{list-style:none;border-top:1px solid var(--line-inv)}
+.scope li{display:grid;grid-template-columns:44px 1fr;padding:15px 0;border-bottom:1px solid var(--line-inv);font-weight:500;font-size:17px}
+.scope li span{font-family:var(--mono);font-size:12px;color:var(--sig);padding-top:4px}
+.fee{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:auto;padding-top:8px;flex-wrap:wrap}
+.fee .v{font-family:var(--display);font-weight:900;font-stretch:80%;font-size:44px;line-height:1;color:var(--sig)}
+.fee .v small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-inv);font-weight:400;margin-top:6px}
+
+/* marquee */
+.also{background:var(--sig);color:var(--ink);overflow:hidden;border-top:1px solid rgba(0,0,0,.1)}
+.also .row{display:flex;width:max-content;animation:scroll 38s linear infinite}
+.also:hover .row{animation-play-state:paused}
+.also .item{display:flex;align-items:center;gap:28px;padding:26px 28px;font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(26px,3vw,40px);letter-spacing:-.02em;white-space:nowrap}
+.also .item:after{content:"";width:12px;height:12px;background:var(--ink);transform:rotate(45deg)}
+.also .lead{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px}
+.why-left h2{font-size:clamp(44px,5vw,80px);margin-bottom:28px}
+.why-left .mission{font-family:var(--display);font-stretch:100%;font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.01em;border-left:3px solid var(--sig-deep);padding-left:22px;margin:36px 0}
+.why-left p.body{color:#3a4352;font-size:18px}
+.years{display:flex;align-items:flex-end;gap:20px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.years .n{font-family:var(--display);font-weight:900;font-stretch:68%;font-size:150px;line-height:.78;letter-spacing:-.04em}
+.years .n sup{font-size:.45em;vertical-align:top;color:var(--sig-deep)}
+.years p{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.15;padding-bottom:6px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.wi{padding:30px 28px 34px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:16px;transition:padding .3s}
+.wi:nth-child(odd){border-right:1px solid var(--line)}
+.wi:nth-child(even){padding-left:28px}
+.wi .mono{color:var(--muted)}
+.wi h4{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:28px;letter-spacing:-.02em;line-height:1.05}
+.wi:hover h4{color:var(--sig-deep)}
+.why-photo{grid-column:1/-1;display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin-top:24px}
+.why-photo div{border-radius:var(--r);overflow:hidden;height:340px}
+.why-photo img{width:100%;height:100%;object-fit:cover}
+
+/* reviews */
+.rev{background:var(--paper-2)}
+.rev .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:56px;align-items:center;padding-top:72px;padding-bottom:72px}
+.rev .score{font-family:var(--display);font-weight:900;font-stretch:70%;font-size:150px;line-height:.8;letter-spacing:-.04em}
+.rev .stars{font-size:24px;letter-spacing:4px;margin-bottom:8px}
+.rev h3{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:36px;letter-spacing:-.02em;line-height:1.05;margin-bottom:10px}
+.rev .who{display:flex;align-items:center;gap:12px;color:var(--muted);margin-top:14px}
+.rev .av{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--sig);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:14px}
+.rev .btns{display:flex;flex-direction:column;gap:10px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper)}
+.contact .kicker{color:var(--muted-inv)}.contact .kicker .n{color:var(--paper)}.contact .kicker:after{background:var(--line-inv)}
+.c-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
+.c-grid h2{font-size:clamp(46px,5.6vw,90px);margin-bottom:24px}
+.c-grid .intro{color:#c4ccd8;font-size:18px;max-width:480px}
+.c-info{margin-top:44px;border-top:1px solid var(--line-inv)}
+.c-row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line-inv);align-items:baseline}
+.c-row .mono{color:var(--muted-inv)}
+.c-row .v{font-family:var(--display);font-weight:700;font-stretch:105%;font-size:22px;line-height:1.25}
+.c-row .v.big{font-size:38px;font-weight:900;font-stretch:90%;color:var(--sig)}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:3px 0}
+.hours td:last-child{text-align:right;font-family:var(--mono);font-size:13px}
+.hours tr.today td{color:var(--sig)}
+.hours tr.off td{color:var(--muted-inv)}
+form.req{background:var(--paper);color:var(--ink);border-radius:var(--r);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px 16px;align-content:start}
+form.req h3{grid-column:1/-1;font-family:var(--display);font-weight:800;font-stretch:110%;font-size:32px;letter-spacing:-.02em}
+form.req .full{grid-column:1/-1}
+.fld label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.fld input,.fld textarea{width:100%;height:52px;border:1.5px solid var(--line);background:var(--white);border-radius:3px;padding:0 14px;font:inherit;font-size:16px;color:var(--ink);transition:border .2s,box-shadow .2s}
+.fld textarea{height:120px;padding:14px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(242,178,51,.35)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;font-weight:600;font-size:15px;background:var(--white);transition:.2s}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+form.req .submit{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:6px}
+form.req .submit small{color:var(--muted);font-size:13.5px;max-width:300px}
+.sent{grid-column:1/-1;display:none;padding:40px 0;text-align:left}
+.sent h3{margin-bottom:10px}
+form.req.done>*:not(.sent){display:none}
+form.req.done .sent{display:block}
+
+/* footer */
+footer{background:#08101c;color:var(--muted-inv);padding:64px 0 40px}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--line-inv)}
+footer h5{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);margin-bottom:18px;font-weight:500}
+footer ul{list-style:none;display:grid;gap:10px;font-size:15px}
+footer a:hover{color:var(--sig)}
+.f-big{font-family:var(--display);font-weight:900;font-stretch:125%;font-size:clamp(48px,10.5vw,168px);letter-spacing:-.04em;line-height:.85;color:var(--ink-3);margin:48px 0 28px;white-space:nowrap;overflow:hidden}
+.f-bot{display:flex;justify-content:space-between;gap:20px;font-size:13px;flex-wrap:wrap}
+
+/* mobile call bar */
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.hero .rv{transition-duration:1s}
+
+/* responsive */
+@media (max-width:1180px){
+  .nav ul{display:none}.burger{display:block}
+  .hero .wrap{grid-template-columns:1fr;gap:20px}
+  .hero-media{min-height:460px;margin:0 calc(var(--pad)*-1)}
+  .hero-media .ph{border-radius:0}
+  .tag.offer{left:var(--pad);top:auto;bottom:28px;width:200px}
+  .tag.offer .big{font-size:52px}
+  .picker .grid{grid-template-columns:1fr 1fr}
+  .app-head,.why-grid,.c-grid{grid-template-columns:1fr;gap:36px}
+  .a1,.a2,.a3{grid-column:span 12;min-height:400px}
+  .price-card,.app-quote{grid-column:span 12}
+  .panel{grid-template-columns:1fr}.panel .media{min-height:360px}
+  .rev .wrap{grid-template-columns:1fr;gap:28px}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .util .l span:not(.keep){display:none}
+  .util .offer{display:none}
+  .nav .phone,.nav .cta .btn{display:none}
+  .nav .wrap{height:70px}
+  .brand .wm b{font-size:16px}
+  .hero .actions .btn{flex:1;justify-content:center}
+  .tag.rate{right:var(--pad);bottom:auto;top:20px;padding:10px 14px}
+  .tag.rate .n{font-size:30px}
+  .picker .grid{grid-template-columns:1fr}
+  .pick{min-height:130px}
+  .tabs{width:100%;overflow-x:auto}.tab{flex:1;justify-content:center;padding:0 12px;font-size:14px}.tab .mono{display:none}
+  .panel .body{padding:28px}.panel h3{font-size:36px}
+  .panel .media .inset{display:none}
+  .price-card{grid-template-columns:1fr;gap:16px}
+  .why-list{grid-template-columns:1fr}
+  .wi:nth-child(odd){border-right:0}.wi:nth-child(even){padding-left:0}
+  .why-photo{grid-template-columns:1fr 1fr}.why-photo div:first-child{grid-column:1/-1}.why-photo div{height:220px}
+  .years .n{font-size:110px}
+  form.req{grid-template-columns:1fr;padding:26px}
+  .c-row{grid-template-columns:1fr;gap:6px}
+  .f-top{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);border-top:1px solid var(--line-inv);padding:10px;gap:10px}
+  .mbar .btn{height:52px;justify-content:center}
+  footer{padding-bottom:110px}
+}
+</style>
+</head>
+<body>
+
+<!-- Utility bar -->
+<div class="util mono">
+  <div class="wrap">
+    <div class="l">
+      <span class="keep"><span class="dot" id="statusDot"></span><b id="statusTxt">Open today 9am – 6pm</b></span>
+      <span>329 Sanford Ave, Hillside, NJ 07205</span>
+    </div>
+    <span class="offer">◆ 10% off the service fee</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Destiny Family home">
+      <div class="mark">DF</div>
+      <div class="wm"><b>Destiny Family</b><span>Home &amp; Appliances Repairs</span></div>
+    </a>
+    <ul>
+      <li><a href="#appliances">Appliances</a></li>
+      <li><a href="#services" data-tab="hvac">HVAC</a></li>
+      <li><a href="#services" data-tab="plumbing">Plumbing</a></li>
+      <li><a href="#services" data-tab="drywall">Drywall</a></li>
+      <li><a href="#why">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="cta">
+      <a class="phone" href="tel:+19084408103"><small>Call the family</small><b>(908) 440-8103</b></a>
+      <a class="btn btn-sig" href="#contact">Request service</a>
+      <button class="burger" aria-label="Menu" onclick="location.hash='contact'"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow mono rv">Hillside, New Jersey · Family-owned · 15+ years</div>
+      <h1 class="disp rv">Home repair, handled <em>like family.</em></h1>
+      <p class="lede rv">Stoves, washers, dryers and fridges back in working order — plus heating &amp; cooling, plumbing and drywall from one trained, trusted team. Best price and service quality in home repair.</p>
+      <div class="actions rv">
+        <a class="btn btn-sig" href="#contact">Book a free consultation <span class="arr"></span></a>
+        <a class="btn btn-ghost" href="tel:+19084408103">Call (908) 440-8103</a>
+      </div>
+    </div>
+    <div class="hero-media rv">
+      <div class="ph"><img src="../img/washer1.jpg" alt="Technician repairing a front-load washing machine in a home kitchen"></div>
+      <div class="tag offer">
+        <div class="mono" style="opacity:.7;margin-bottom:6px">Special discount</div>
+        <div class="big">10% off</div>
+        <p>the service fee on your repair.</p>
+      </div>
+      <div class="tag rate">
+        <div class="n">5.0</div>
+        <div><div class="stars">★★★★★</div><small>Google rating</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service picker -->
+<section class="picker" data-screen-label="Service picker">
+  <div class="wrap">
+    <div class="head mono"><span>What needs fixing?</span><span>Mon–Fri · 9am–6pm</span></div>
+    <div class="grid">
+      <a class="pick feat" href="#appliances">
+        <div class="top"><span class="num">01 / Most requested</span><span class="price">$50 – $100</span></div>
+        <div class="top" style="align-items:flex-end">
+          <div><h3>Appliance Repair</h3><div class="sub">Stove · Washer · Dryer · Fridge</div></div>
+          <span class="go"><span class="arr"></span></span>
+        </div>
+      </a>
+      <a class="pick" href="#services" data-tab="hvac">
+        <div class="top"><span class="num">02</span><span class="price">$100 call</span></div>
+        <div class="top" style="align-items:flex-end">
+          <div><h3>HVAC</h3><div class="sub">Heating · Cooling · Ventilation</div></div>
+          <span class="go"><span class="arr"></span></span>
+        </div>
+      </a>
+      <a class="pick" href="#services" data-tab="plumbing">
+        <div class="top"><span class="num">03</span></div>
+        <div class="top" style="align-items:flex-end">
+          <div><h3>Plumbing</h3><div class="sub">Sinks · Drains · Pipes</div></div>
+          <span class="go"><span class="arr"></span></span>
+        </div>
+      </a>
+      <a class="pick" href="#services" data-tab="drywall">
+        <div class="top"><span class="num">04</span></div>
+        <div class="top" style="align-items:flex-end">
+          <div><h3>Drywall</h3><div class="sub">Walls · Ceilings</div></div>
+          <span class="go"><span class="arr"></span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Appliances -->
+<section class="sec" id="appliances" data-screen-label="Appliance repair">
+  <div class="wrap">
+    <div class="app-head">
+      <div>
+        <div class="kicker mono rv"><span class="n">01</span> Appliance repair</div>
+        <h2 class="disp rv">Your appliances, <span>running like new.</span></h2>
+      </div>
+      <p class="rv">Dealing with a malfunctioning stove, a broken washer, a dryer that won't start, or a fridge that's not cooling properly? Our skilled technicians have the expertise and equipment to get your household running smoothly again — fast, reliable and at affordable rates.</p>
+    </div>
+
+    <div class="app-grid">
+      <div class="atile a1 rv">
+        <img src="../img/oven1.jpg" alt="Technician testing an oven element with a multimeter">
+        <span class="lbl mono">Kitchen</span>
+        <div class="cap"><div><h3>Stoves &amp; ovens</h3><p>Burners, elements and ovens that won't heat — diagnosed and repaired on site.</p></div></div>
+      </div>
+      <div class="atile a2 rv">
+        <img src="../img/washer1.jpg" alt="Technician working on a washing machine" style="object-position:70% 50%">
+        <span class="lbl mono">Laundry</span>
+        <div class="cap"><div><h3>Washers &amp; dryers</h3><p>A broken washer or a dryer that won't start — back in working order.</p></div></div>
+      </div>
+      <div class="atile a3 rv">
+        <img src="../img/fridge1.jpg" alt="Technician repairing a stainless steel refrigerator" style="object-position:40% 50%">
+        <span class="lbl mono">Cooling</span>
+        <div class="cap"><div><h3>Fridges</h3><p>Not cooling properly? We'll find out why.</p></div></div>
+      </div>
+
+      <div class="price-card rv">
+        <div class="p">$50<small>up to $100</small></div>
+        <div>
+          <span class="mono">Appliance repair pricing</span>
+          <p>High-quality service at affordable rates, with competitive pricing on every visit. Mention our special to take <b style="color:var(--sig)">10% off the service fee.</b></p>
+          <a class="btn btn-sig" href="#contact" style="margin-top:22px" data-service="Appliance repair">Schedule your repair <span class="arr"></span></a>
+        </div>
+      </div>
+      <div class="app-quote rv">
+        <div class="mono" style="color:var(--muted)">We repair</div>
+        <ul><li>Stoves</li><li>Washers</li><li>Dryers</li><li>Fridges</li></ul>
+        <p style="color:#3a4352">Don't let appliance issues disrupt your daily routine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services console -->
+<section class="sec console" id="services" data-screen-label="Home services">
+  <div class="wrap">
+    <div class="kicker mono rv"><span class="n">02</span> Home services</div>
+    <div class="con-top">
+      <h2 class="disp rv">Comfort, water and walls — covered by the same crew.</h2>
+      <div class="tabs rv" role="tablist">
+        <button class="tab on" data-p="hvac"><span class="mono">02</span>HVAC</button>
+        <button class="tab" data-p="plumbing"><span class="mono">03</span>Plumbing</button>
+        <button class="tab" data-p="drywall"><span class="mono">04</span>Drywall</button>
+      </div>
+    </div>
+
+    <div class="panel on" id="p-hvac">
+      <div class="media">
+        <img src="../img/hvac2.jpg" alt="HVAC technician servicing an outdoor heat pump unit">
+      </div>
+      <div class="body">
+        <div class="mono" style="color:var(--sig)">Heating · Ventilation · Air conditioning</div>
+        <h3>HVAC Services</h3>
+        <p>Keeping your home comfortable and energy efficient is our top priority. Our team provides reliable heating, ventilation and air conditioning service to keep your home running smoothly all year round.</p>
+        <ul class="scope">
+          <li><span>A</span>Boiler &amp; electric heater repairs</li>
+          <li><span>B</span>Central air &amp; split system service</li>
+          <li><span>C</span>New system installation</li>
+        </ul>
+        <div class="fee">
+          <div class="v">$100<small>Service call fee</small></div>
+          <a class="btn btn-sig" href="#contact" data-service="HVAC">Schedule HVAC <span class="arr"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-plumbing">
+      <div class="media">
+        <img src="../img/plumb1.jpg" alt="Plumber tightening a pipe under a kitchen sink" style="object-position:50% 60%">
+      </div>
+      <div class="body">
+        <div class="mono" style="color:var(--sig)">No problem too big or too small</div>
+        <h3>Plumbing</h3>
+        <p>Fast, reliable service at competitive rates. We pride ourselves on attention to detail and go above and beyond to make sure your plumbing problems are solved efficiently and effectively.</p>
+        <ul class="scope">
+          <li><span>A</span>Sink &amp; bathroom repair</li>
+          <li><span>B</span>Top &amp; water closet installation</li>
+          <li><span>C</span>Drain &amp; pipe replacement</li>
+        </ul>
+        <div class="fee">
+          <div class="v" style="font-size:28px;font-stretch:100%">Free<small>Consultation</small></div>
+          <a class="btn btn-sig" href="#contact" data-service="Plumbing">Schedule plumbing <span class="arr"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-drywall">
+      <div class="media">
+        <img src="../img/dry1.jpg" alt="Drywall finisher taping a new ceiling" style="object-position:50% 40%">
+        <div class="inset"><img src="../img/dry4.jpg" alt="Drywall taping knives and mud pan"></div>
+      </div>
+      <div class="body">
+        <div class="mono" style="color:var(--sig)">Home improvement</div>
+        <h3>Drywall</h3>
+        <p>Part of our full home-improvement service. From drywall to flooring, painting and drop ceilings, we have the skills and equipment to handle the project — with the same quality craftsmanship we bring to every repair.</p>
+        <ul class="scope">
+          <li><span>A</span>Drywall</li>
+          <li><span>B</span>Drop ceiling services</li>
+          <li><span>C</span>Painting</li>
+        </ul>
+        <div class="fee">
+          <div class="v" style="font-size:28px;font-stretch:100%">Free<small>Consultation</small></div>
+          <a class="btn btn-sig" href="#contact" data-service="Drywall">Request a quote <span class="arr"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Also -->
+<section class="also" aria-label="More services" data-screen-label="More services">
+  <div class="row" id="marq">
+    <div class="item lead">Also on the job</div>
+    <div class="item">Domestic electricity</div>
+    <div class="item">Flooring</div>
+    <div class="item">Cabinets &amp; countertops</div>
+    <div class="item">Painting</div>
+    <div class="item">Door &amp; window replacement</div>
+    <div class="item">Drop ceilings</div>
+  </div>
+</section>
+
+<!-- Why -->
+<section class="sec" id="why" data-screen-label="Why Destiny Family">
+  <div class="wrap why-grid">
+    <div class="why-left">
+      <div class="kicker mono rv"><span class="n">03</span> About the family</div>
+      <h2 class="disp rv">Top handyman services in Hillside.</h2>
+      <p class="body rv">Destiny Family is your go-to destination for home improvement and appliance repair. Our team of experienced professionals delivers high-proficiency quality services at the best prices — with competitive pricing and a commitment to exceptional value and customer satisfaction.</p>
+      <p class="mission rv">“We are always fighting to help your family stay close, healthy, and wealthy.”</p>
+      <div class="years rv">
+        <div class="n">15<sup>+</sup></div>
+        <p>years of<br>experience</p>
+      </div>
+    </div>
+    <div class="why-list rv">
+      <div class="wi"><span class="mono">01</span><h4>Free consultation</h4></div>
+      <div class="wi"><span class="mono">02</span><h4>Family-owned</h4></div>
+      <div class="wi"><span class="mono">03</span><h4>Quality craftsmanship</h4></div>
+      <div class="wi"><span class="mono">04</span><h4>Trained workers</h4></div>
+      <div class="wi"><span class="mono">05</span><h4>Commitment &amp; professionalism</h4></div>
+      <div class="wi"><span class="mono">06</span><h4>15+ years experience</h4></div>
+      <div class="wi"><span class="mono">07</span><h4>Quality services</h4></div>
+      <div class="wi"><span class="mono">08</span><h4>Best prices</h4></div>
+    </div>
+    <div class="why-photo">
+      <div class="rv"><img src="../img/oven2.jpg" alt="Technician repairing a built-in oven" style="object-position:30% 40%"></div>
+      <div class="rv"><img src="../img/hvac2.jpg" alt="HVAC technician at work" style="object-position:80% 50%"></div>
+      <div class="rv"><img src="../img/plumb2.jpg" alt="Plumber with a pipe wrench and faucet" style="object-position:70% 30%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="rev" data-screen-label="Reviews">
+  <div class="wrap">
+    <div class="score rv">5.0</div>
+    <div class="rv">
+      <div class="stars">★★★★★</div>
+      <h3>Rated five stars on Google.</h3>
+      <p style="color:#3a4352;max-width:520px">Worked with us recently? Your review helps other Hillside families find help they can trust.</p>
+      <div class="who"><span class="av">LD</span><span><b style="color:var(--ink)">Luders Desarmes</b> · <span class="mono">Google review · Oct 2024</span></span></div>
+    </div>
+    <div class="btns rv">
+      <a class="btn btn-ink" href="https://search.google.com/local/writereview?placeid=ChIJbey_Pm-bLkoRmVsXRUI64_E" target="_blank" rel="noopener">Leave a review <span class="arr"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="sec contact" id="contact" data-screen-label="Contact">
+  <div class="wrap c-grid">
+    <div>
+      <div class="kicker mono rv"><span class="n">04</span> Get in touch</div>
+      <h2 class="disp rv">Ready to improve your home?</h2>
+      <p class="intro rv">Have a question or want to schedule a service? Send us a few details and one of our team members will be in touch.</p>
+      <div class="c-info rv">
+        <div class="c-row"><span class="mono">Call</span><a class="v big" href="tel:+19084408103">(908) 440-8103</a></div>
+        <div class="c-row"><span class="mono">Visit</span><a class="v" href="https://maps.google.com/?q=329%20Sanford%20Ave%2C%20Hillside%2C%20NJ%2007205" target="_blank" rel="noopener">329 Sanford Ave<br>Hillside, NJ 07205</a></div>
+        <div class="c-row"><span class="mono">Email</span><a class="v" href="mailto:destinyfamilybros@gmail.com" style="font-size:19px">destinyfamilybros@gmail.com</a></div>
+        <div class="c-row"><span class="mono">Hours</span>
+          <table class="hours" id="hours">
+            <tr data-d="1"><td>Monday</td><td>9:00 – 6:00</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>9:00 – 6:00</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>9:00 – 6:00</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>9:00 – 6:00</td></tr>
+            <tr data-d="5"><td>Friday</td><td>9:00 – 6:00</td></tr>
+            <tr data-d="6" class="off"><td>Saturday</td><td>Closed</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <form class="req rv" id="req" onsubmit="event.preventDefault();this.classList.add('done')">
+      <h3>Tell us about your request</h3>
+      <div class="fld full">
+        <label>Service needed</label>
+        <div class="chips" id="chips">
+          <button type="button" class="chip on">Appliance repair</button>
+          <button type="button" class="chip">HVAC</button>
+          <button type="button" class="chip">Plumbing</button>
+          <button type="button" class="chip">Drywall</button>
+          <button type="button" class="chip">Other</button>
+        </div>
+      </div>
+      <div class="fld"><label for="fn">First name</label><input id="fn" required></div>
+      <div class="fld"><label for="ln">Last name</label><input id="ln"></div>
+      <div class="fld"><label for="em">Email</label><input id="em" type="email" required></div>
+      <div class="fld"><label for="ph">Phone number</label><input id="ph" type="tel"></div>
+      <div class="fld full"><label for="msg">What's going on?</label><textarea id="msg" placeholder="e.g. Dryer won't start, Frigidaire, about 6 years old"></textarea></div>
+      <div class="submit full">
+        <small>Prefer to talk? Call <b>(908) 440-8103</b>, Mon–Fri 9am–6pm.</small>
+        <button class="btn btn-ink" type="submit">Send request <span class="arr"></span></button>
+      </div>
+      <div class="sent">
+        <div class="mark" style="margin-bottom:22px">DF</div>
+        <h3>Thanks — we've got it.</h3>
+        <p style="color:var(--muted)">One of our team members will be in touch. For anything urgent, call (908) 440-8103.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a href="#top" class="brand" style="color:var(--paper);margin-bottom:20px">
+          <div class="mark">DF</div>
+          <div class="wm"><b>Destiny Family</b><span>Home &amp; Appliances Repairs</span></div>
+        </a>
+        <p style="font-size:15px;max-width:320px;margin-top:20px">Best price &amp; service quality in home repair. Family-owned in Hillside, New Jersey.</p>
+      </div>
+      <div><h5>Services</h5><ul><li><a href="#appliances">Appliance repair</a></li><li><a href="#services" data-tab="hvac">HVAC</a></li><li><a href="#services" data-tab="plumbing">Plumbing</a></li><li><a href="#services" data-tab="drywall">Drywall</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#why">About</a></li><li><a href="#why">Why choose us</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h5>Reach us</h5><ul><li><a href="tel:+19084408103">(908) 440-8103</a></li><li><a href="mailto:destinyfamilybros@gmail.com">destinyfamilybros@gmail.com</a></li><li>329 Sanford Ave<br>Hillside, NJ 07205</li></ul></div>
+    </div>
+    <div class="f-big">Destiny Family</div>
+    <div class="f-bot"><span>© <span id="yr"></span> Destiny Family Home &amp; Appliances Repairs</span><span class="mono">Hillside · New Jersey · 07205</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-sig" href="tel:+19084408103">Call now</a>
+  <a class="btn btn-ghost" style="color:var(--paper)" href="#contact">Request service</a>
+</div>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+// tabs
+function showTab(k){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.p===k));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+k));
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.p)));
+document.querySelectorAll('[data-tab]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.tab)));
+
+// preselect service chip from CTAs
+const chips=[...document.querySelectorAll('.chip')];
+chips.forEach(c=>c.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on')}));
+document.querySelectorAll('[data-service]').forEach(a=>a.addEventListener('click',()=>{
+  chips.forEach(x=>x.classList.toggle('on',x.textContent===a.dataset.service));
+}));
+
+// marquee duplicate
+const m=document.getElementById('marq');m.innerHTML+=m.innerHTML;
+
+// open/closed status (America/New_York)
+(function(){
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  const weekday=d>=1&&d<=5, open=weekday&&h>=9&&h<18;
+  const dot=document.getElementById('statusDot'),txt=document.getElementById('statusTxt');
+  if(open){txt.textContent='Open now · until 6pm'}
+  else{dot.classList.add('closed');txt.textContent=weekday&&h<9?'Opens today at 9am':'Closed · opens Mon–Fri 9am'}
+  const row=document.querySelector('#hours tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  document.getElementById('yr').textContent=now.getFullYear();
+})();
+
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach((el,i)=>{
+  const sib=[...el.parentElement.children].filter(x=>x.classList.contains('rv'));
+  el.style.transitionDelay=(sib.indexOf(el)*70)+'ms';io.observe(el);
+});
+</script>
+</body>
+</html>
